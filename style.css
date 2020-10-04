@@ -1,0 +1,43 @@
+.container {
+	width: 80%;
+	min-width: 600px;
+	margin: 50px auto;
+}
+
+button.accordion {
+	width: 100%;
+	background-color: whitesmoke;
+	border: none;
+	outline: none;
+	text-align: left;
+	padding: 15px 20px;
+	cursor: pointer;
+	font-size: 18px;
+	transition: background-color 0.2s linear;
+	display: flex;
+	justify-content: space-between;
+}
+button.accordion:hover {
+	background-color: #ddd;
+}
+
+button.accordion::after {
+	content: "+";
+}
+
+button.accordion.is-open::after {
+	content: "-";
+}
+
+button.accordion.is-open {
+	background-color: yellowgreen;
+}
+
+.accordion-content {
+	padding: 0 20px;
+	border-left: 1px solid whitesmoke;
+	border-right: 1px solid whitesmoke;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s ease-in-out;
+}
